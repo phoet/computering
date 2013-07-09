@@ -4,14 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'computering/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Computering"
+  spec.name          = "computering"
   spec.version       = Computering::VERSION
   spec.authors       = ["Peter Schröder"]
   spec.email         = ["phoetmail@googlemail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.summary = spec.description   = %q{pretends you could type really fast}
+  spec.homepage      = "https://github.com/phoet/computering"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
