@@ -1,0 +1,34 @@
+#! /usr/bin/env ruby
+lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
+
+require "programming"
+require "io/console"
+
+include Programming::Dsl
+
+file = ARGV[0]
+code = File.readlines(file).join("\n")
+eval(code)
+
+items.each do |lines|
+  lines.each do |line|
+    if line.blank?
+      puts ""
+    else
+      i = 0
+      STDIN.noecho do |io|
+        while char = io.getch
+          exit if char.ord == 3
+          if char.ord == 13
+            STDOUT.puts line[i..-1]
+            break
+          else
+            STDOUT.putc line[i] if line[i]
+            i += 1
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,3 @@
+module Programming
+  VERSION = "0.0.1"
+end
