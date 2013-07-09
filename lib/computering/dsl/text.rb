@@ -1,4 +1,4 @@
-module Programming::Dsl
+module Computering::Dsl
   class Text
     def initialize(line, buffer = "")
       @line   = line

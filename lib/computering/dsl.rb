@@ -1,4 +1,4 @@
-module Programming
+module Computering
   module Dsl
     def paragraph(text)
       self.items += Text.from_text(text)

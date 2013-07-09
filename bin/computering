@@ -2,7 +2,7 @@
 lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
 $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 
-require "programming"
+require "Computering"
 
-cmd = Programming::Cmd.new ARGV[0]
-cmd.execute rescue Programming::Cmd::Exit
+cmd = Computering::Cmd.new ARGV[0]
+cmd.execute rescue Computering::Cmd::Exit

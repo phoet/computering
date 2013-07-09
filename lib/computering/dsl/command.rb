@@ -1,4 +1,4 @@
-module Programming::Dsl
+module Computering::Dsl
   class Command < Text
     def self.from_text(text)
       buffer = `#{text}`

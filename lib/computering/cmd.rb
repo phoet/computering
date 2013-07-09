@@ -1,10 +1,10 @@
 require "io/console"
 
-module Programming
+module Computering
   class Cmd
     class Exit < StandardError; end
 
-    include Programming::Dsl
+    include Computering::Dsl
 
     CONTROL_C = 3
     ENTER     = 13
