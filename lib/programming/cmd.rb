@@ -4,6 +4,9 @@ module Programming
   class Cmd
     include Programming::Dsl
 
+    CONTROL_C = 3
+    ENTER     = 13
+
     def initialize(file, stdin = STDIN, stdout = STDOUT)
       @file   = file
       @stdin  = stdin
@@ -29,8 +32,8 @@ module Programming
       i = 0
       @stdin.noecho do |io|
         while char = io.getch
-          return if char.ord == 3
-          if char.ord == 13
+          return if char.ord == CONTROL_C
+          if char.ord == ENTER
             @stdout.puts line[i..-1]
             break
           else
