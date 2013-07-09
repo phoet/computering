@@ -1,4 +1,5 @@
 require "programming/version"
 require "programming/dsl"
-require "programming/text"
+require "programming/dsl/text"
+require "programming/dsl/command"
 require "programming/cmd"

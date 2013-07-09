@@ -1,13 +1,21 @@
 module Programming
   module Dsl
     def paragraph(text)
-      items.push Text.from_paragraph(text)
+      self.items += Text.from_text(text)
     end
 
-    private
+    def command(text)
+      self.items << Command.from_text(text)
+    end
+
+    protected
 
     def items
       @items ||= []
+    end
+
+    def items=(items)
+      @items = items
     end
   end
 end

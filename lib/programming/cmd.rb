@@ -11,33 +11,32 @@ module Programming
       @file   = file
       @stdin  = stdin
       @stdout = stdout
-      @code   = File.readlines(file).join("\n")
+      @code   = File.readlines(file).join "\n"
 
-      instance_eval(@code)
+      instance_eval @code
     end
 
     def execute
-      items.each do |lines|
-        lines.each do |line|
-          if line.blank?
-            @stdout.puts ""
-          else
-            readchars(line)
-          end
+      items.each do |item|
+        if item.blank?
+          @stdout.puts ""
+        else
+          readchars item
         end
       end
     end
 
-    def readchars(line)
+    def readchars(item)
       i = 0
       @stdin.noecho do |io|
         while char = io.getch
           return if char.ord == CONTROL_C
           if char.ord == ENTER
-            @stdout.puts line[i..-1]
+            @stdout.puts item[i..-1]
+            @stdout.puts item.buffer
             break
           else
-            @stdout.putc line[i] if line[i]
+            @stdout.putc item[i] if item[i]
             i += 1
           end
         end
