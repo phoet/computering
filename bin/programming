@@ -5,4 +5,4 @@ $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 require "programming"
 
 cmd = Programming::Cmd.new ARGV[0]
-cmd.execute
+cmd.execute rescue Programming::Cmd::Exit

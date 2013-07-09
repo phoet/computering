@@ -2,6 +2,8 @@ require "io/console"
 
 module Programming
   class Cmd
+    class Exit < StandardError; end
+
     include Programming::Dsl
 
     CONTROL_C = 3
@@ -30,7 +32,7 @@ module Programming
       i = 0
       @stdin.noecho do |io|
         while char = io.getch
-          return if char.ord == CONTROL_C
+          raise Exit if char.ord == CONTROL_C
           if char.ord == ENTER
             @stdout.puts item[i..-1]
             @stdout.puts item.buffer
