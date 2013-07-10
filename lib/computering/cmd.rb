@@ -20,6 +20,7 @@ module Computering
 
     def execute
       items.each do |item|
+        item.execute
         if item.blank?
           @stdout.puts ""
         else

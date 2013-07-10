@@ -1,12 +1,15 @@
 module Computering::Dsl
   class Text
-    def initialize(line, buffer = "")
-      @line   = line
-      @buffer = buffer
+    def initialize(text)
+      @text   = text
+      @buffer = ""
     end
 
     def [](index)
-      @line[index]
+      @text[index]
+    end
+
+    def execute
     end
 
     def buffer
@@ -14,7 +17,7 @@ module Computering::Dsl
     end
 
     def blank?
-      @line.nil? || @line.strip == ""
+      @text.nil? || @text.strip == ""
     end
 
     def self.from_text(text)

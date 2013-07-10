@@ -5,7 +5,7 @@ module Computering
     end
 
     def command(text)
-      self.items << Command.from_text(text)
+      self.items += Command.from_text(text)
     end
 
     protected
