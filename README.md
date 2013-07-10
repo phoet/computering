@@ -2,6 +2,17 @@
 
 ![Computering](https://peepcode.com/blog/2013/charismatic-duo/img/dinosaur-hands.gif)
 
+# Usage
+
+see _example_ folder
+
+# TODO
+
+* syntax-check
+* dry-mode
+* config speed
+* add styling
+
 # License
 
 "THE (extended) BEER-WARE LICENSE" (Revision 42.0815): [phoet](mailto:ps@nofail.de) contributed to this project.
