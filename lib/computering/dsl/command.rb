@@ -1,9 +1,9 @@
 module Computering::Dsl
   class Command < Text
     def initialize(cmd)
-      @text   = "> #{cmd}"
+      @text   = "$ #{cmd}".color(:blue).background(:cyan)
+      @buffer = ""
       @cmd    = cmd
-      super
     end
 
     def execute
@@ -13,8 +13,8 @@ module Computering::Dsl
       puts $!
     end
 
-    def self.from_text(text)
-      Array(self.new text)
+    def self.from_text(cmd)
+      Array(self.new cmd)
     end
   end
 end

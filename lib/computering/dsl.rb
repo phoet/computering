@@ -1,5 +1,9 @@
 module Computering
   module Dsl
+    def headline(text)
+      self.items += Headline.from_text(text)
+    end
+
     def paragraph(text)
       self.items += Text.from_text(text)
     end
