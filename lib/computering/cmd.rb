@@ -19,10 +19,10 @@ module Computering
     end
 
     def execute
+      @stdout.puts
       items.each do |item|
-        item.execute
         if item.blank?
-          @stdout.puts ""
+          @stdout.puts
         else
           readchars item
         end
@@ -36,6 +36,7 @@ module Computering
           raise Exit if char.ord == CONTROL_C
           if char.ord == ENTER
             @stdout.puts item[i..-1]
+            item.execute
             @stdout.puts item.buffer
             break
           else

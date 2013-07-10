@@ -1,7 +1,8 @@
 module Computering::Dsl
   class Headline < Text
     def initialize(text)
-      super(text.foreground(:red).underline)
+      @text   = text.background(:red)
+      @buffer = "#{'=' * text.size}\n\n".foreground(:red)
     end
   end
 end

@@ -12,6 +12,10 @@ module Computering
       self.items += Command.from_text(text)
     end
 
+    def link(text, link)
+      self.items += Link.from_text(text, link)
+    end
+
     protected
 
     def items

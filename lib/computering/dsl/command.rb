@@ -1,13 +1,16 @@
 module Computering::Dsl
   class Command < Text
     def initialize(cmd)
-      @text   = "$ #{cmd}".color(:blue).background(:cyan)
+      @text   = " #{'⌘'.color(:green)}  #{cmd.color(:black).background(:cyan)}"
       @buffer = ""
       @cmd    = cmd
     end
 
     def execute
-      output  = `#{@cmd}`
+      output = ""
+      Bundler.with_clean_env do
+        output = `#{@cmd}`
+      end
       @buffer = "\n#{output}\n"
     rescue
       puts $!
