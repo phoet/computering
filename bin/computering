@@ -4,5 +4,14 @@ $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 
 require "Computering"
 
-cmd = Computering::Cmd.new ARGV[0]
-cmd.execute rescue Computering::Cmd::Exit
+abort "USAGE: computering file [file ...]" if ARGV.empty?
+
+begin
+  puts "", "Start typing or exit with Ctrl+C", ""
+  ARGV.each do |cmd|
+    cmd = Computering::Cmd.new ARGV[0]
+    cmd.execute
+  end
+rescue Computering::Cmd::Exit
+  puts "", "KTHXBYE!"
+end

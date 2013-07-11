@@ -19,7 +19,6 @@ module Computering
     end
 
     def execute
-      @stdout.puts
       items.each do |item|
         if item.blank?
           @stdout.puts
