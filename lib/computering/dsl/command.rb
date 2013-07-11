@@ -1,3 +1,5 @@
+require "bundler"
+
 module Computering::Dsl
   class Command < Text
     def initialize(cmd)
