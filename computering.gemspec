@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Computering::VERSION
   spec.authors       = ["Peter Schröder"]
   spec.email         = ["phoetmail@googlemail.com"]
+  spec.license       = %q{THE (extended) BEER-WARE LICENSE}
   spec.summary = spec.description   = %q{pretends you could type really fast}
   spec.homepage      = "https://github.com/phoet/computering"
 
