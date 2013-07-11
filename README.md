@@ -4,7 +4,35 @@
 
 # Usage
 
-see _example_ folder
+Installing the gem:
+
+```
+gem install computering
+```
+
+or via Bundler
+
+```ruby
+#Gemfile
+gem "computering"
+```
+
+create a presentation file
+
+```
+echo "
+headline 'computering'
+paragraph 'is super easy'
+command 'echo to use'
+link 'see yourself', 'https://github.com/phoet/computering'
+" > preso.rb
+```
+
+and run it with the `computering` command:
+
+```
+computering preso.rb
+```
 
 # TODO
 
