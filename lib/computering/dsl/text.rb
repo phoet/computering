@@ -5,8 +5,9 @@ module Computering::Dsl
       text.strip.split("\n").map { |line| self.new(line) }
     end
 
-    def initialize(text)
+    def initialize(text, buffer = nil)
       @text   = text
+      @buffer = buffer
     end
 
     def [](index)
@@ -17,7 +18,7 @@ module Computering::Dsl
     end
 
     def buffer
-      nil
+      @buffer
     end
 
     def padding
