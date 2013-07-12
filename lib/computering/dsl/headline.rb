@@ -1,13 +1,7 @@
 module Computering::Dsl
   class Headline < Text
     def buffer
-      "#{'=' * @text.size}".foreground(:red)
-    end
-
-    protected
-
-    def text_with_style(text, index)
-      text.background(:red)
+      add_style('=' * @text.size, :buffer)
     end
   end
 end

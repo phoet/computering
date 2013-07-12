@@ -40,7 +40,6 @@ computering preso.rb
 * syntax-check
 * dry-mode
 * config speed
-* add flexible styling
 
 # License
 

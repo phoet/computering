@@ -32,7 +32,12 @@ module Computering::Dsl
     protected
 
     def text_with_style(text, index)
-      text
+      add_style(text, :text)
+    end
+
+    def add_style(text, type)
+      id = self.class.name.split("::").last.downcase.to_sym
+      Computering::Config.styling(text, id, type)
     end
   end
 end

@@ -12,15 +12,15 @@ module Computering::Dsl
     def execute
       `open '#{@link}'`
     rescue
-      @buffer = "#{$!}"
+      @buffer = add_style($!.message, :error)
     end
 
     protected
 
     def text_with_style(text, index)
-      text = text.color(:black).background(:cyan)
+      text = add_style(text, :text)
       if index == 0 || index == (0..-1)
-        text = " #{'☞'.color(:green)}  #{text}"
+        text = " #{add_style('☞', :cursor)}  #{text}"
       end
       text
     end

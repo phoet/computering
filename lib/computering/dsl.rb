@@ -1,5 +1,9 @@
 module Computering
   module Dsl
+    def configure(&block)
+      Config.instance_eval(&block)
+    end
+
     def headline(text)
       self.items += Headline.from_text(text)
     end

@@ -1,6 +1,7 @@
 require "rainbow"
 
 require "computering/version"
+require "computering/config"
 require "computering/dsl"
 require "computering/dsl/text"
 require "computering/dsl/command"
