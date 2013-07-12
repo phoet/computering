@@ -1,19 +1,28 @@
 module Computering::Dsl
   class Link < Text
+    def self.from_text(text, link)
+      Array(self.new text, link)
+    end
+
     def initialize(text, link)
-      @text   = " #{'☞'.color(:green)}  #{text}"
-      @link   = link
-      @buffer = ''
+      super text
+      @link = link
     end
 
     def execute
       `open '#{@link}'`
     rescue
-      puts $!
+      @buffer = "#{$!}"
     end
 
-    def self.from_text(text, link)
-      Array(self.new text, link)
+    protected
+
+    def text_with_style(text, index)
+      text = text.color(:black).background(:cyan)
+      if index == 0 || index == (0..-1)
+        text = " #{'☞'.color(:green)}  #{text}"
+      end
+      text
     end
   end
 end

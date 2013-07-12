@@ -36,10 +36,13 @@ module Computering
           if char.ord == ENTER
             @stdout.puts item[i..-1]
             item.execute
-            @stdout.puts item.buffer
+            @stdout.puts item.buffer if item.buffer
+            @stdout.puts item.padding if item.padding
             break
           else
-            @stdout.putc item[i] if item[i]
+            if text = item[i]
+              text.chars { |c| @stdout.putc c}
+            end
             i += 1
           end
         end

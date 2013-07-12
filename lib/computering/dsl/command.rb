@@ -2,24 +2,22 @@ require "bundler"
 
 module Computering::Dsl
   class Command < Text
-    def initialize(cmd)
-      @text   = " #{'⌘'.color(:green)}  #{cmd.color(:black).background(:cyan)}"
-      @buffer = ""
-      @cmd    = cmd
-    end
-
     def execute
-      output = ""
       Bundler.with_clean_env do
-        output = `#{@cmd}`
+        @buffer = `#{@text}`
       end
-      @buffer = "\n#{output}\n"
     rescue
-      puts $!
+      @buffer = "#{$!}"
     end
 
-    def self.from_text(cmd)
-      Array(self.new cmd)
+    protected
+
+    def text_with_style(text, index)
+      text = text.color(:black).background(:cyan)
+      if index == 0 || index == (0..-1)
+        text = " #{'⌘'.color(:green)}  #{text}"
+      end
+      text
     end
   end
 end

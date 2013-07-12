@@ -1,8 +1,13 @@
 module Computering::Dsl
   class Headline < Text
-    def initialize(text)
-      @text   = text.background(:red)
-      @buffer = "#{'=' * text.size}\n\n".foreground(:red)
+    def buffer
+      "#{'=' * @text.size}".foreground(:red)
+    end
+
+    protected
+
+    def text_with_style(text, index)
+      text.background(:red)
     end
   end
 end
