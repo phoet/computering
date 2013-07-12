@@ -4,10 +4,10 @@ module Computering::Dsl
   class Command < Text
     def execute
       Bundler.with_clean_env do
-        @buffer = `#{@text}`
+        @buffer = `#{@text}`.chomp.bright
       end
     rescue
-      @buffer = "#{$!}"
+      @buffer = "#{$!}".color(:red)
     end
 
     protected
