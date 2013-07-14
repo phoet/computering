@@ -28,7 +28,7 @@ module Computering
           if char.ord == ENTER
             @stdout.puts item[i..-1]
             item.execute
-            @stdout.puts item.buffer if item.buffer
+            @stdout.puts item.buffer  if item.buffer
             @stdout.puts item.padding if item.padding
             break
           else

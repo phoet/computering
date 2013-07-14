@@ -11,7 +11,7 @@ module Computering
     protected
 
     def block_source(name)
-      @source.blocks[name]
+      @source.blocks[name].strip
     end
   end
 end

@@ -19,7 +19,7 @@ module Computering::Dsl
     end
 
     def buffer
-      "#{padding}#{@buffer}" if @buffer
+      add_style(@buffer, :buffer) if @buffer
     end
 
     def padding

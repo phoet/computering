@@ -3,11 +3,12 @@ require "bundler"
 module Computering::Dsl
   class Command < Text
     def execute
+      @buffer = "\n"
       Bundler.with_clean_env do
-        @buffer = add_style(`#{@text}`.chomp, :buffer)
+        @buffer << `#{@text}`.chomp
       end
     rescue
-      @buffer = add_style($!.message, :error)
+      @buffer << add_style($!.message, :error)
     end
 
     protected

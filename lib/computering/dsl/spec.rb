@@ -21,8 +21,9 @@ module Computering::Dsl
 
     def initialize(name, text, &block)
       super text
-      @name  = name
-      @block = block
+      @name   = name
+      @block  = block
+      @buffer = "\n"
     end
 
     def execute
@@ -39,10 +40,10 @@ module Computering::Dsl
 
       reporter.report
 
-      @buffer = output.string.strip
+      @buffer << output.string.strip
       Minitest::Test.reset
     rescue
-      @buffer = add_style($!.message, :error)
+      @buffer << add_style($!.message, :error)
     end
   end
 end
