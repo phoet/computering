@@ -25,15 +25,14 @@ module Computering
 
     class << self
       attr_accessor :style
-      attr_reader :style_defaults
 
       def styling(text, id, type)
-        default = style_defaults[id][type] || "-"
-        if style[id] && style[id][type]
-          style[id][type].gsub("-", text)
-        else
-          default.gsub("-", text)
-        end
+        style_defaults(id, type).gsub("-", text)
+      end
+
+      def style_defaults(id, type)
+        default = @style_defaults[id][type] || "-"
+        (style[id] && style[id][type]) ? style[id][type] : default
       end
     end
   end
