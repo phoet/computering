@@ -20,11 +20,7 @@ module Computering
 
     def execute
       items.each do |item|
-        if item.blank?
-          @stdout.puts
-        else
-          readchars item
-        end
+        readchars item unless item.blank?
       end
     end
 
@@ -40,9 +36,7 @@ module Computering
             @stdout.puts item.padding if item.padding
             break
           else
-            if text = item[i]
-              text.chars { |c| @stdout.putc c}
-            end
+            @stdout.write item[i] if item[i]
             i += 1
           end
         end

@@ -18,7 +18,7 @@ module Computering::Dsl
     end
 
     def buffer
-      "\n#{@buffer}" if @buffer
+      "#{padding}#{@buffer}" if @buffer
     end
 
     def padding
