@@ -1,9 +1,10 @@
 module Computering::Dsl
   class Text
-
     def self.from_text(text)
       text.strip.split("\n").map { |line| self.new(line) }
     end
+
+    attr_reader :text
 
     def initialize(text, buffer = nil)
       @text   = text
