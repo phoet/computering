@@ -4,22 +4,18 @@ module Computering
   class Cmd
     class Exit < StandardError; end
 
-    include Computering::Dsl
-
     CONTROL_C = 3
     ENTER     = 13
 
     def initialize(file, stdin = STDIN, stdout = STDOUT)
-      @file   = file
-      @stdin  = stdin
-      @stdout = stdout
-      @code   = File.readlines(file).join "\n"
-
-      instance_eval @code
+      @file       = file
+      @stdin      = stdin
+      @stdout     = stdout
+      @container  = Container.new File.read(file)
     end
 
     def execute
-      items.each do |item|
+      @container.items.each do |item|
         readchars item unless item.blank?
       end
     end

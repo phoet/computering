@@ -36,7 +36,6 @@ computering preso.rb
 
 # TODO
 
-* run expectations in preso
 * syntax-check
 * dry-mode
 * config speed

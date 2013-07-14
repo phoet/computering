@@ -1,5 +1,9 @@
 module Computering
   module Dsl
+    def spec(name, &block)
+      self.items += Spec.from_block(name, block_source(name), &block)
+    end
+
     def configure(&block)
       Config.instance_eval(&block)
     end
@@ -19,8 +23,6 @@ module Computering
     def link(text, link)
       self.items += Link.from_text(text, link)
     end
-
-    protected
 
     def items
       @items ||= []

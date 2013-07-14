@@ -20,6 +20,11 @@ module Computering
         buffer: "-".bright,
         error:  "-".color(:red),
       },
+      spec: {
+        text:   "-".foreground(:green),
+        buffer: "-".bright,
+        error:  "-".color(:red),
+      },
     }
     @style = @style_defaults.dup
 
