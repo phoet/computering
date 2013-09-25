@@ -5,6 +5,10 @@ module Computering
         text:   "-",
         buffer: "-",
       },
+      list: {
+        text:   "-",
+        bullet: "-".color(:green),
+      },
       headline: {
         text:   "-".background(:red),
         buffer: "-".background(:red),

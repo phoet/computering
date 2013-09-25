@@ -8,15 +8,19 @@ module Computering
       Config.instance_eval(&block)
     end
 
-    def headline(text)
+    def list(*text)
+      self.items += List.from_text(text)
+    end
+
+    def headline(*text)
       self.items += Headline.from_text(text)
     end
 
-    def paragraph(text)
+    def paragraph(*text)
       self.items += Text.from_text(text)
     end
 
-    def command(text)
+    def command(*text)
       self.items += Command.from_text(text)
     end
 

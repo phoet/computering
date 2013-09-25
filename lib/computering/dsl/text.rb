@@ -1,7 +1,9 @@
 module Computering::Dsl
   class Text
-    def self.from_text(text)
-      text.strip.split("\n").map { |line| self.new(line) }
+    def self.from_text(*text)
+      text.flatten.map do |t|
+        t.strip.split("\n").map { |line| self.new(line) }
+      end.flatten
     end
 
     attr_reader :text
