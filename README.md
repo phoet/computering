@@ -31,8 +31,36 @@ link 'see yourself', 'https://github.com/phoet/computering#usage'
 and run it with the `computering` command:
 
 ```
-computering preso.rb
+computering bash preso.rb
 ```
+
+# LeapMotion
+
+You can use the LeapMotion as an input device!
+
+In order for that to work, you will have to add the _leap_motion_ gem:
+
+```ruby
+#Gemfile
+gem "leap_motion"
+```
+
+and run it with the `leap` option:
+
+```
+computering leap preso.rb
+```
+
+## Typing Rules
+
+Use both hands!
+
+* typing gesture
+  * change number of finders between 7 and 10
+  * one character per change
+* typewriter gesture
+  * swipe 1 finger
+  * one command per change
 
 # TODO
 
