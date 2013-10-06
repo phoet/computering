@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module Computering::Dsl
   class Link < Text
     def self.from_text(text, link)
@@ -10,7 +11,7 @@ module Computering::Dsl
     end
 
     def execute
-      `open '#{@link}'`
+      `#{command_by_os} '#{@link}'`
     rescue
       @buffer = add_style($!.message, :error)
     end
@@ -23,6 +24,16 @@ module Computering::Dsl
         text = " #{add_style('☞', :cursor)}  #{text}"
       end
       text
+    end
+
+    private
+
+    def command_by_os
+      if (/linux/ =~ RUBY_PLATFORM)
+        "xdg-open"
+      else
+        "open"
+      end
     end
   end
 end
