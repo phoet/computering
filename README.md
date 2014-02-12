@@ -1,6 +1,6 @@
 # Computering
 
-![Computering](https://peepcode.com/blog/2013/charismatic-duo/img/dinosaur-hands.gif)
+![Computering](http://blog.pluralsight.com/wp-content/uploads/peepcode/2013/charismatic-duo/img/dinosaur-hands.gif)
 
 # Usage
 
