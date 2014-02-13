@@ -32,7 +32,13 @@ module Computering
             @stdout.puts item.padding if item.padding
             break
           else
-            @stdout.write item[i] if item[i]
+            if item[i]
+              while item[i] =~ /\s/
+                @stdout.write item[i]
+                i += 1
+              end
+              @stdout.write item[i]
+            end
             i += 1
           end
         end

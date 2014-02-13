@@ -1,11 +1,11 @@
 module Computering
   module Dsl
-    def spec(name, &block)
-      self.items += Spec.from_block(name, block_source(name), &block)
-    end
-
     def configure(&block)
       Config.instance_eval(&block)
+    end
+
+    def spec(name, &block)
+      self.items += Spec.from_block(name, block_source(name), &block)
     end
 
     def list(*text)
@@ -18,6 +18,10 @@ module Computering
 
     def paragraph(*text)
       self.items += Text.from_text(text)
+    end
+
+    def code(*text)
+      self.items += Code.from_text(text)
     end
 
     def command(*text)

@@ -7,27 +7,27 @@ module Computering
       },
       list: {
         text:   "-",
-        bullet: "-".color(:green),
+        bullet: Rainbow("-").color(:green),
       },
       headline: {
-        text:   "-".background(:red),
-        buffer: "-".background(:red),
+        text:   Rainbow("-").background(:red),
+        buffer: Rainbow("-").background(:red),
       },
       link: {
-        text:   "-".color(:black).background(:cyan),
-        cursor: "-".color(:green),
-        error:  "-".background(:red),
+        text:   Rainbow("-").color(:black).background(:cyan),
+        cursor: Rainbow("-").color(:green),
+        error:  Rainbow("-").background(:red),
       },
       command: {
-        text:   "-".color(:black).background(:cyan),
-        cursor: "-".color(:green),
-        buffer: "-".bright,
-        error:  "-".color(:red),
+        text:   Rainbow("-").color(:black).background(:cyan),
+        cursor: Rainbow("-").color(:green),
+        buffer: Rainbow("-").bright,
+        error:  Rainbow("-").color(:red),
       },
       spec: {
-        text:   "-".foreground(:green),
-        buffer: "-".bright,
-        error:  "-".color(:red),
+        text:   Rainbow("-").foreground(:green),
+        buffer: Rainbow("-").bright,
+        error:  Rainbow("-").color(:red),
       },
     }
     @style = @style_defaults.dup
