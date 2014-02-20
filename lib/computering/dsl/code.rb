@@ -6,6 +6,10 @@ module Computering::Dsl
       text.flatten.map { |line| self.new(line) }
     end
 
+    def padding
+      nil
+    end
+
     protected
 
     def text_with_style(text, index)

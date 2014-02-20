@@ -23,13 +23,14 @@ module Computering
     def readchars(item)
       i = 0
       @stdin.noecho do |io|
+        @stdout.write item.padding if item.padding
         while char = io.getch
           raise Exit if char.ord == CONTROL_C
           if char.ord == ENTER
             @stdout.puts item[i..-1]
             item.execute
-            @stdout.puts item.buffer  if item.buffer
-            @stdout.puts item.padding if item.padding
+            @stdout.puts "#{item.padding}#{item.buffer}" if item.buffer
+            @stdout.puts
             break
           else
             if item[i]

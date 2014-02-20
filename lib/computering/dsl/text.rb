@@ -20,12 +20,12 @@ module Computering::Dsl
     def execute
     end
 
-    def buffer
-      add_style(@buffer, :buffer) if @buffer
+    def padding
+      "   "
     end
 
-    def padding
-      "\n"
+    def buffer
+      add_style(@buffer, :buffer) if @buffer
     end
 
     def blank?

@@ -3,5 +3,9 @@ module Computering::Dsl
     def buffer
       add_style('=' * @text.size, :buffer)
     end
+
+    def margin
+      "       "
+    end
   end
 end
