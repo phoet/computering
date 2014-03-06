@@ -1,19 +1,19 @@
-headline 'MIDDLEWARES'
-link 'BACON', 'http://bit.ly/1maTrIt'
-paragraph 'and'
-link 'zazicki', 'http://bit.ly/Mqmwzz'
+headline 'Rails Middlewares for Fun (and Profit?)'
+link 'Señor Developer Bacon', 'http://bit.ly/1maTrIt'
 
 paragraph 'what can we do with a middleware?'
 
 list [
-  "implement cross-cutting concerns",
-  "enrich request information",
-  "modify the response",
+  "implement cross-cutting concerns (authorization, caching, logging)",
+  "enrich request information (session-cookies)",
+  "modify the response (inject javascript)",
 ]
 
-headline 'EXAMPLE WEBSITE'
+link 'rails is rack based', 'http://rack.github.io/'
 
-command 'cd ~/Documents/rails/on_ruby/ && git co 2c9846ce'
+headline 'Website Example'
+
+command 'cd ~/o/ && git co 2c9846ce'
 link 'veggie.onruby', 'http://hamburg.onruby.dev:5000/'
 
 paragraph "let's write some code"
@@ -38,16 +38,20 @@ class BaconInfused
 end
 ])
 
-command 'cd ~/Documents/rails/on_ruby/ && git co 0c943352'
+command 'cd ~/o/ && git co ba41abd30'
+command 'cd ~/o/ && bundle exec rake middleware'
 link 'bacon.onruby', 'http://hamburg.onruby.dev:5000/'
 
-paragraph "awesome, isn't it?!"
+headline "Downsides"
+list [
+  "out of sight",
+  "fragile",
+  "no live code reloading",
+]
 
-paragraph 'what about the garlic sauce?'
+link "WHY U NO CMD+R?", 'http://stackoverflow.com/questions/20874222/reloading-rails-middleware-without-restarting-the-server-in-development/21323432'
 
-headline "WHY U NO CMD+R?"
-
-link 'reloading middlewares', 'http://stackoverflow.com/questions/20874222/reloading-rails-middleware-without-restarting-the-server-in-development/21323432'
+link 'zazicki', 'http://bit.ly/Mqmwzz'
 
 link 'github.com/phoet/zazicki', 'http://github.com/phoet/zazicki'
 
