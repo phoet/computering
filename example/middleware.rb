@@ -4,12 +4,23 @@ link 'Señor Developer Bacon', 'http://bit.ly/1maTrIt'
 paragraph 'what can we do with a middleware?'
 
 list [
-  "implement cross-cutting concerns (authorization, caching, logging)",
+  "implement cross-cutting concerns (authorization, caching)",
   "enrich request information (session-cookies)",
   "modify the response (inject javascript)",
 ]
 
 link 'rails is rack based', 'http://rack.github.io/'
+
+code(%Q[
+class HelloWorld
+  def call(env)
+    [200, {"Content-Type" => "text/plain"}, ["Hello world!"]]
+  end
+end
+
+# even simpler
+proc {|env| [200, {"Content-Type" => "text/plain"}, ["Hello world!"]] }
+])
 
 headline 'Website Example'
 
@@ -36,6 +47,9 @@ class BaconInfused
     [s, h, r]
   end
 end
+
+# config/application.rb
+config.middleware.use "BaconInfused"
 ])
 
 command 'cd ~/o/ && git co ba41abd30'
