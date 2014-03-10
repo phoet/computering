@@ -22,7 +22,7 @@ module Computering::Dsl
 
       it "has defaults" do
         assert_equal true, @item.blank?
-        assert_equal "\n", @item.padding
+        assert_equal "   ", @item.padding
         assert_equal nil,  @item.buffer
         assert_equal nil,  @item.execute
       end

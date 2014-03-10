@@ -13,12 +13,12 @@ module Computering
 
       it "applies styles to text" do
         assert_equal "-", Config.style_defaults(:text, :text)
-        assert_equal "-".color(:green), Config.style_defaults(:command, :cursor)
+        assert_equal Rainbow("-").color(:green), Config.style_defaults(:command, :cursor)
       end
 
       it "can override styles" do
-        Config.style = {command: {cursor: "-".color(:blue)}}
-        assert_equal "-".color(:blue), Config.style_defaults(:command, :cursor)
+        Config.style = {command: {cursor: Rainbow("-").color(:blue)}}
+        assert_equal Rainbow("-").color(:blue), Config.style_defaults(:command, :cursor)
       end
     end
   end
