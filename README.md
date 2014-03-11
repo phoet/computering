@@ -10,13 +10,6 @@ Installing the gem:
 gem install computering
 ```
 
-or via Bundler
-
-```ruby
-#Gemfile
-gem "computering"
-```
-
 create a presentation file
 
 ```
@@ -33,6 +26,19 @@ and run it with the `computering` command:
 ```
 computering preso.rb
 ```
+
+# DSL
+
+Please have a look at the dsl.rb file and the examples folder for how to use the DSL.
+
+Supported commands are:
+
+* headline (underlined text output)
+* paragraph (simple text output)
+* link (opens a page via `open`)
+* command (runs a shell command and captures the output)
+* code (syntaxhighlights ruby code)
+* spec (runs inline minitest-spec)
 
 # TODO
 
