@@ -4,7 +4,7 @@
 
 # Usage
 
-[![Gem Version](https://badge.fury.io/rb/computering.png)](http://badge.fury.io/rb/computering)
+[![Gem Version](https://badge.fury.io/rb/computering.svg)](http://badge.fury.io/rb/computering)
 
 Installing the gem:
 
