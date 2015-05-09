@@ -3,8 +3,10 @@ require "io/console"
 module Computering
   class Cmd
     class Exit < StandardError; end
+    class Reload < StandardError; end
 
     CONTROL_C = 3
+    CONTROL_R = 18
     ENTER     = 13
 
     def initialize(file, stdin = STDIN, stdout = STDOUT)
@@ -26,6 +28,7 @@ module Computering
         @stdout.write item.padding if item.padding
         while char = io.getch
           raise Exit if char.ord == CONTROL_C
+          raise Reload if char.ord == CONTROL_R
           if char.ord == ENTER
             @stdout.puts item[i..-1]
             item.execute
