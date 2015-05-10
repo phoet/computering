@@ -12,6 +12,7 @@ begin
     cmd = Computering::Cmd.new ARGV[0]
     cmd.execute
   end
+  puts "", ">> github.com/phoet/computering <<", ""
 rescue Computering::Cmd::Exit
   puts "", "KTHXBYE!"
 rescue Computering::Cmd::Reload
