@@ -1,6 +1,6 @@
 # Computering
 
-![Computering](http://blog.pluralsight.com/wp-content/uploads/peepcode/2013/charismatic-duo/img/dinosaur-hands.gif)
+![Computering](https://giftoppr.desktopprassets.com/uploads/47fb227c10d2fd03af74401982cd6eb20fb79894/dinosaur-hands.gif)
 
 # Usage
 
