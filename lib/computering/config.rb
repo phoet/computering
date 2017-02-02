@@ -1,5 +1,9 @@
 module Computering
   class Config
+    def self.font
+      Rainbow("-")
+    end
+
     @style_defaults = {
       text: {
         text:   "-",
@@ -7,27 +11,27 @@ module Computering
       },
       list: {
         text:   "-",
-        bullet: Rainbow("-").color(:green),
+        bullet: font.color(:green),
       },
       headline: {
-        text:   Rainbow("-").background(:red),
-        buffer: Rainbow("-").background(:red),
+        text:   font.background(:red),
+        buffer: font.background(:red),
       },
       link: {
-        text:   Rainbow("-").color(:black).background(:cyan),
-        cursor: Rainbow("-").color(:green),
-        error:  Rainbow("-").background(:red),
+        text:   font.color(:black).background(:cyan),
+        cursor: font.color(:green),
+        error:  font.background(:red),
       },
       command: {
-        text:   Rainbow("-").color(:black).background(:cyan),
-        cursor: Rainbow("-").color(:green),
-        buffer: Rainbow("-").bright,
-        error:  Rainbow("-").color(:red),
+        text:   font.color(:black).background(:cyan),
+        cursor: font.color(:green),
+        buffer: font.bright,
+        error:  font.color(:red),
       },
       spec: {
-        text:   Rainbow("-").foreground(:green),
-        buffer: Rainbow("-").bright,
-        error:  Rainbow("-").color(:red),
+        text:   font.foreground(:green),
+        buffer: font.bright,
+        error:  font.color(:red),
       },
     }
     @style = @style_defaults.dup

@@ -2,8 +2,8 @@ configure do
   # changes styles described here: https://github.com/sickill/rainbow#features
   self.style = {
     headline: {
-      text:   "-".background(:green),
-      buffer: "-".background(:blue),
+      text:   font.background(:green),
+      buffer: font.background(:blue),
     }
   }
 end
