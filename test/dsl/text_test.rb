@@ -23,8 +23,8 @@ module Computering::Dsl
       it "has defaults" do
         assert_equal true, @item.blank?
         assert_equal "   ", @item.padding
-        assert_equal nil,  @item.buffer
-        assert_equal nil,  @item.execute
+        assert_nil  @item.buffer
+        assert_nil  @item.execute
       end
 
       it "inits from string" do

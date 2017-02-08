@@ -20,6 +20,10 @@ module Computering
       self.items += Text.from_text(text)
     end
 
+    def quote(*text)
+      self.items += Quote.from_text(text)
+    end
+
     def code(*text)
       self.items += Code.from_text(text)
     end
