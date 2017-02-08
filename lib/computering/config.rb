@@ -17,6 +17,9 @@ module Computering
         text:   font.background(:red),
         buffer: font.background(:red),
       },
+      quote: {
+        text:   font.color(:gray),
+      },
       link: {
         text:   font.color(:black).background(:cyan),
         cursor: font.color(:green),
