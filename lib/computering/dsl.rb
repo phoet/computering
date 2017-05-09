@@ -4,6 +4,10 @@ module Computering
       Config.instance_eval(&block)
     end
 
+    def timer(text)
+      self.items += Timer.from_now(text)
+    end
+
     def spec(name, &block)
       self.items += Spec.from_block(name, block_source(name), &block)
     end

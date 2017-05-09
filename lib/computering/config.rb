@@ -9,6 +9,10 @@ module Computering
         text:   "-",
         buffer: "-",
       },
+      timer: {
+        text:   "-",
+        buffer: "-",
+      },
       list: {
         text:   "-",
         bullet: font.color(:green),
