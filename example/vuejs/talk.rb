@@ -2,7 +2,7 @@ headline 'Vue.js / JavaScript: The Good Parts 😜'
 
 command '~/.iterm2/imgcat example/vuejs/grumpy-cat-i-hate-javascript.jpg'
 
-paragraph 'but why? just because its different? 😤'
+paragraph 'but why? just because its different? 🤔'
 
 list [
   'prototypes',
@@ -16,15 +16,19 @@ paragraph 'but why did i still hate it? 😳'
 
 list [
   'hype framework of the week',
-  'litle standards',
+  'immaturity / little standardization',
   'dependency nightmare',
-  'tooling crazyness',
+  'tooling craziness',
   'overwhelming?',
 ]
+
+command 'cowsay -f udder "JavaScript, why you so complicated?"'
 
 headline 'Vue.js to the rescue! 🤘'
 
 quote 'Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces.'
+
+link 'Feels so productive', 'https://twitter.com/phoet/status/857283699032948739'
 
 paragraph 'why is it appealing? 💖'
 
@@ -37,12 +41,22 @@ list [
   'sounds familiar?',
 ]
 
-paragraph 'easy to build a mental model! 🤔'
+paragraph 'easy to build a mental model! 🙃'
 
 list [
-  'components',
-  'directives',
-  'bindings',
+  'MVVM',
+  'MVP',
+  'MVC',
+  'M&Ms?'
+]
+
+paragraph 'who cares?'
+paragraph '(for those who do its MVVM)'
+
+list [
+  'components (view)',
+  'directives (behavior)',
+  'bindings (data)',
 ]
 
 code '<helloWorldComponent />'
