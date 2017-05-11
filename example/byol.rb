@@ -1,6 +1,6 @@
 headline 'BYOL - B ring Y our O wn L ogging'
 
-paragraph 'papertrail like addon in 15 minutes'
+paragraph 'build a heroku logging-addon in 15 minutes'
 
 headline 'TOPICS'
 
@@ -20,9 +20,9 @@ command 'cd ~/o && heroku drains'
 
 command 'cd ~/o && heroku addons:open papertrail'
 
-link 'heroku log drains', 'https://devcenter.heroku.com/articles/log-drains'
+link 'heroku logplex drains', 'https://devcenter.heroku.com/articles/log-drains#https-drains'
 
-link 'accessing logs', 'https://devcenter.heroku.com/articles/accessing-app-logs'
+link 'accessing logs', 'https://devcenter.heroku.com/articles/accessing-app-logs#add-on-manifest'
 
 
 headline 'HEROKU ADDON-API'
@@ -37,6 +37,8 @@ list [
   "SSO LOGIN   => post    '/sso/login'",
   "SSO INDEX   => get     '/'",
 ]
+
+paragraph 'add some sprinkles of JSON'
 
 
 headline 'KENSA GEM'
@@ -60,7 +62,7 @@ code("kensa create let-it-drain --template sinatra")
 
 command 'cd ~/l && jq "." -C addon-manifest.json'
 
-paragraph 'some customizations'
+paragraph 'some customizations:'
 
 list [
   'persistance with mongodb',
@@ -68,7 +70,7 @@ list [
   'websocket connection',
 ]
 
-link 'addon code', 'https://github.com/phoet/let-it-drain/blob/master/app/app.rb#L67-L131'
+link 'moar addon code', 'https://github.com/phoet/let-it-drain/blob/master/app/app.rb#L52-L131'
 
 paragraph 'see it in action'
 
@@ -99,7 +101,7 @@ command 'cd ~/o && heroku drains'
 command 'cd ~/o && heroku addons:open let-it-drain'
 command 'curl -sS http://hamburg.onruby.de > /dev/null'
 
-command 'cowsay -f bunny Questions'
+command 'cowsay -f bunny "Questions?"'
 
 link 'computering', 'https://github.com/phoet/computering#computering'
 

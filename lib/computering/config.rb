@@ -9,6 +9,10 @@ module Computering
         text:   "-",
         buffer: "-",
       },
+      timer: {
+        text:   "-",
+        buffer: "-",
+      },
       list: {
         text:   "-",
         bullet: font.color(:green),
@@ -18,7 +22,7 @@ module Computering
         buffer: font.background(:red),
       },
       quote: {
-        text:   font.color(:gray),
+        text:   font.color(:aqua),
       },
       link: {
         text:   font.color(:black).background(:cyan),
