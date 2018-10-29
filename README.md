@@ -1,6 +1,6 @@
 # Computering
 
-![Computering](https://giftoppr.desktopprassets.com/uploads/47fb227c10d2fd03af74401982cd6eb20fb79894/dinosaur-hands.gif)
+![Computering](http://gifsb.in/excited/dinosaur-hands.gif)
 
 # Usage
 
