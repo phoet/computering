@@ -7,7 +7,7 @@ require "computering"
 abort "USAGE: computering file [file ...]" if ARGV.empty?
 
 begin
-  puts "", "Start typing or exit with Ctrl+C, reload with Ctrl+R, back with Ctrl+B", ""
+  puts "", "Welcome to computering https://github.com/phoet/computering/", "", "Start typing or exit with Ctrl+C, reload with Ctrl+R, back with Ctrl+B", ""
   ARGV.each do |cmd|
     cmd = Computering::Cmd.new ARGV[0]
     cmd.execute
